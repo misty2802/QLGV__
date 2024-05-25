@@ -1,0 +1,59 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+</head>
+
+<body>
+
+    <div class='header_container'>
+        <div class='logo_image'>
+            <a href="/"><img src="{% static 'assets/images/logo.png'%}" alt="logo" /></a>
+        </div>
+        <div class='right_line_header'>
+            <div class="render_role">
+                {user.isRole == 0 ? "ADMIN" : "GIẢNG VIÊN"}
+            </div>
+
+
+            <div class='account_dropdown ' id="account_dropdown" onclick="toggleDropdown()">
+                <img src="{% static 'assets/images/avt_df.jpg'%}" alt="defaut_avata" class='avt_df' />
+                <div class='name_user_header'>
+                    <div> NGUYEN VAN PHONG</div>
+                    <div>MGV : GV123123</div>
+                </div>
+            </div>
+            <div class="box_drop_account unactive_drop_box" id="box_drop_account">
+                <div class='item_select_acc'>
+                    <!-- <MdManageAccounts /> -->
+                    <div class='text_sl_acc'>Cập nhật thông tin</div>
+                </div>
+                <div class='item_select_acc' onclick={handleLogout}>
+                    <!-- <MdLogout /> -->
+                    <div class='text_sl_acc'>Đăng xuất</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'javascript/HeaderComponent.js'%}"></script>
+
+
+    <div class="body_container">
+        <div id="menuContainer"></div>
+        <script src="{% static 'javascript/MenuComponent.js'%}"></script>
+
+        <div class="body_page" style="width: calc( 100% - 250px )">
+
+            abc
+        </div>
+    </div>
+
+</body>
+
+</html>

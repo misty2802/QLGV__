@@ -1,0 +1,30 @@
+
+@import "../Fontawesome_v6/css/all.css";
+
+@import "./Login.css";
+@import "./HeaderComponent.css";
+@import "./MenuComponent.css";
+@import "./HomePage.css";
+@import "./ForumPage.css";
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.body_container {
+    width: 100%;
+    display: flex;
+    background-color: #eaeaea;
+}
+
+.body_container .body_page {
+    padding: 10px;
+}
